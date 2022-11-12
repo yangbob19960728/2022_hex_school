@@ -1,5 +1,5 @@
 <template>
-  <div id="bob">
+  <div>
     <NuxtLayout>
       
       <NuxtPage />
@@ -18,9 +18,6 @@ const appConfig = useAppConfig()
 </script>
 
 <style lang="scss">
-#bob {
-  background-color: $secondary;
-}
 
 // .page-enter-active,
 // .page-leave-active {

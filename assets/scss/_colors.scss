@@ -1,2 +1,54 @@
 $primary: #49240F;
 $secondary: #E4A79D;
+$fontSizeBase: 16px;
+$primary: #49240F;
+$secondary: #E4A79D;
+$breakpoints: (
+    sm: "576px",
+    md: "768px",
+    lg: "992px",
+    xl: "1200px",
+    xxl: "1400px"
+);
+
+@mixin breakpoint ($name, $breakpoints) {
+    @media (max-width: map-get($breakpoints, $name)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-sm {
+    @include breakpoint("sm", $breakpoints) {
+        @content;
+    }
+}
+
+@mixin breakpoint-md {
+    @include breakpoint("md", $breakpoints) {
+        @content;
+    }
+}
+
+@mixin breakpoint-lg {
+    @include breakpoint("lg", $breakpoints) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xl {
+    @include breakpoint("xl", $breakpoints) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xxl {
+    @include breakpoint("xxl", $breakpoints) {
+        @content;
+    }
+}
+
+@mixin breakpoint-custom ($maxWidth) {
+    @media(max-width: $maxWidth) {
+        @content;
+    }
+}

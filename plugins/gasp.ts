@@ -7,7 +7,7 @@ export default defineNuxtPlugin(nuxtApp => {
     gsap.registerPlugin(ScrollTrigger, TextPlugin);
     return {
         provide: {
-            gasp: gsap
+            gsap: gsap
         }
     }
 })

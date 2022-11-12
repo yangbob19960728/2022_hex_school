@@ -6,11 +6,11 @@
                     <li>
                         <NuxtLink to="/">Home</NuxtLink>
                     </li>
-                    <li>
+                    <!-- <li>
                         <NuxtLink to="/about">About</NuxtLink>
-                    </li>
+                    </li> -->
                     <li>
-                        <NuxtLink to="/testGsap">testGsap</NuxtLink>
+                        <NuxtLink to="/hexCompetition1">hexCompetition1</NuxtLink>
                     </li>
                 </ul>
             </nav>

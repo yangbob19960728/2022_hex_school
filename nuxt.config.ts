@@ -1,4 +1,5 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+
 export default defineNuxtConfig({
     // ssr: false,
     app: {
@@ -19,6 +20,9 @@ export default defineNuxtConfig({
             apiBase: '/api'
         }
     },
+    css: [
+        '@/assets/scss/main.scss'
+    ],
     vite: {
         css: {
             preprocessorOptions: {

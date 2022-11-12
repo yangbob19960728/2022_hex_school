@@ -1,11 +1,11 @@
 <template>
     <div>
-        <Header />
+        <!-- <Header /> -->
         <slot />
 
-        <LazyFooter v-if="show"/>
+        <!-- <LazyFooter v-if="show"/> -->
         <!-- <AppFooter /> -->
-        <button v-if="!show" @click="show = true">Show List</button>
+        <!-- <button v-if="!show" @click="show = true">Show List</button> -->
     </div>
 </template>
 

@@ -1,0 +1,51 @@
+@import 'normalize.css';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: $fontSizeBase ;
+    @include breakpoint-xxl {
+        font-size: $fontSizeBase - 1;
+    }
+    @include breakpoint-xl {
+        font-size: $fontSizeBase - 2;
+    }
+    @include breakpoint-lg {
+        font-size: $fontSizeBase - 4;
+    }
+    @include breakpoint-sm {
+        font-size: $fontSizeBase - 6;
+    }
+}
+body {
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        background-color: #EFDDC3;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #38241B;
+        border-radius: 4px;
+    }
+}
+
+
+
+.font-weight-light {
+    font-weight: 300;
+}
+
+.font-weight-normal {
+    font-weight: 400;
+}
+
+.font-weight-bold {
+    font-weight: 500;
+}
+
+.font-weight-bolder {
+    font-weight: 700;
+}
