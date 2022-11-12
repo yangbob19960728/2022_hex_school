@@ -1,5 +1,11 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
+  ? {
+      router: {
+        base: '/<repository-name>/'
+      }
+    }
+  : {}
 export default defineNuxtConfig({
     // ssr: false,
     app: {
@@ -31,5 +37,8 @@ export default defineNuxtConfig({
                 }
             }
         }
+    },
+    router: {
+        base: '/2022_hex_school/'
     }
 })
