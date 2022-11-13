@@ -548,7 +548,8 @@ img {
     background-image: url('@/assets/img/background_loading.jpg');
     background-position: 50% 50%;
     background-size: cover;
-    background-repeat: repeat-y;
+    background-repeat: repeat;
+    background-color: #DCC9A9;
     position: relative;
     cursor: url('@/assets/img/mouse.png') 0 0, pointer;
 

@@ -2,16 +2,11 @@
 // const runtimeConfig = useRuntimeConfig()
 const baseURL = process.env.NUXT_APP_DEPLOY_ENV === 'GH_PAGES' ? "/2022_hex_school/": "/"
 export default defineNuxtConfig({
-    // ssr: false,
-    // experimental: {
-    //     payloadExtraction: false
-    // },
     app: {
         // pageTransition: { name: 'page', mode: 'out-in' },
         // layoutTransition: { name: 'layout', mode: 'out-in' }
         baseURL: baseURL,
         buildAssetsDir: "nuxt",
-        
     },
     typescript: {
         shim: false,
@@ -37,14 +32,6 @@ export default defineNuxtConfig({
                     additionalData: '@use "@/assets/scss/_colors.scss" as *;'
                 }
             }
-        },
-        // build: {
-        //     rollupOptions: {
-        //         output: {
-        //             name: 'MyBundle'
-        //         }
-        //     }
-            
-        // }
+        }
     }
 })
