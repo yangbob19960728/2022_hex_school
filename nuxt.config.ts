@@ -1,16 +1,17 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
-  ? {
-      router: {
-        base: '/<repository-name>/'
-      }
-    }
-  : {}
+// const runtimeConfig = useRuntimeConfig()
+const baseURL = process.env.NUXT_APP_DEPLOY_ENV === 'GH_PAGES' ? "/2022_hex_school/": "/"
 export default defineNuxtConfig({
     // ssr: false,
+    // experimental: {
+    //     payloadExtraction: false
+    // },
     app: {
         // pageTransition: { name: 'page', mode: 'out-in' },
         // layoutTransition: { name: 'layout', mode: 'out-in' }
+        baseURL: baseURL,
+        buildAssetsDir: "nuxt",
+        
     },
     typescript: {
         shim: false,
@@ -36,9 +37,14 @@ export default defineNuxtConfig({
                     additionalData: '@use "@/assets/scss/_colors.scss" as *;'
                 }
             }
-        }
-    },
-    router: {
-        base: '/2022_hex_school/'
+        },
+        // build: {
+        //     rollupOptions: {
+        //         output: {
+        //             name: 'MyBundle'
+        //         }
+        //     }
+            
+        // }
     }
 })

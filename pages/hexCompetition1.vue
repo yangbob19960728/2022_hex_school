@@ -1,6 +1,15 @@
 <template>
     <div class="competition1">
         <section ref="pageSection">
+            <!-- <client-only>
+                <lottie-vue-player v-if="isLoadedImage" :src="`https://assets10.lottiefiles.com/packages/lf20_tzjfwgud.json`"
+                    :theme="options.theme"
+                    :player-size="options.playerSize"
+                    :player-controls="true"
+                    style="width: 100%; height:400px">
+                </lottie-vue-player>
+            </client-only> -->
+            
             <header class="header">
                 <div class="header__content">
                     <div>
@@ -858,7 +867,7 @@ img {
         }
 
         .list__item__content {
-            background-image: url(/_nuxt/assets/img/item_background.png);
+            background-image: url("@/assets/img/item_background.png");
             background-size: 100% 100%;
             min-height: 454px;
             background-repeat: no-repeat;
@@ -1329,18 +1338,19 @@ img {
 </style>
 
 <script setup lang="ts">
-
 import { ref, onMounted, Ref } from 'vue'
 
 const { $gsap, $lottie } = useNuxtApp()
-
 const runtimeConfig = useRuntimeConfig()
 useHead({
     link: [
         {
+            title: "六角第一周"
+        },
+        {
             rel: "preload",
             as: "image",
-            href: runtimeConfig.app.buildAssetsDir + "public/data/wand_loading.json"
+            href: runtimeConfig.app.baseURL + "data/wand_loading.json"
         }
     ]
 })
@@ -1348,6 +1358,27 @@ useHead({
 definePageMeta({
     layout: "no-layout",
 });
+
+// const options: any = {
+//     minimizable: false,
+//     playerSize: "standard",
+//     backgroundColor: '#fff',
+//     backgroundStyle: 'color',
+//     theme: {
+//         controlsView: "standard",
+//         active: "light",
+//         light: {
+//             color: '#3D4852',
+//             backgroundColor: '#fff',
+//             opacity: '0.7',
+//         },
+//         dark: {
+//             color: '#fff',
+//             backgroundColor: '#202020',
+//             opacity: '0.7',
+//         }
+//     }
+// }
 
 const scrollTip = ref<HTMLDivElement | null>(null);
 const wand = ref<HTMLDivElement | null>(null);
@@ -1375,14 +1406,14 @@ onMounted(() => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: runtimeConfig.app.buildAssetsDir + 'public/data/scroll_down.json'
+        path: runtimeConfig.app.baseURL + "data/scroll_down.json"
     })
     $lottie.loadAnimation({
         container: wand.value,
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: runtimeConfig.app.buildAssetsDir + 'public/data/wand_loading.json'
+        path: runtimeConfig.app.baseURL + "data/wand_loading.json"
     })
 
     $lottie.loadAnimation({
@@ -1390,7 +1421,7 @@ onMounted(() => {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: runtimeConfig.app.buildAssetsDir + 'public/data/wand_loading.json'
+        path: runtimeConfig.app.baseURL + "data/wand_loading.json"
     })
 
     //等待三張banner圖片都已經載入之後，並且等待時間超過0.5s時才會出現，以及要用complete來判斷，因為瀏覽器會有cache，這要就不會有load事件
@@ -1401,7 +1432,6 @@ onMounted(() => {
             }
             else {
                 item.value.addEventListener("load", function () {
-                    console.log("load image")
                     resolve(item.value.complete)
                 })
             }
@@ -1425,7 +1455,6 @@ onMounted(() => {
                 scrub: 1,
                 pin: true,
                 end: () => {
-                    console.log("+=" + window.innerHeight)
                     return "+=" + window.innerHeight * 1.5
                 },
                 onLeave: () => {
@@ -1433,7 +1462,6 @@ onMounted(() => {
                     //game section animation
                     if (!isPageAnimationFinish.value) {
                         const children = gameContainer.value.querySelectorAll('.list__item:not(.list__item--introduction)')
-                        console.log(children)
                         children.forEach((child) => {
                             $gsap.from(child, {
                                 x: -100,
@@ -1450,7 +1478,6 @@ onMounted(() => {
                     }
                 },
                 onEnterBack: () => {
-                    console.log("onEnterBack")
                     isShowCoverContainer.value = true;
                 }
             },

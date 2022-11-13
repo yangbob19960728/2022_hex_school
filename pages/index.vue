@@ -1,9 +1,8 @@
 <template>
     <div>
-        <NuxtWelcome />
-        <!-- <NuxtLink to="/">Home</NuxtLink>
         <NuxtLink to="/hexCompetition1">六角第一周比賽頁</NuxtLink>
-        首頁還在努力XDDD -->
+        <NuxtWelcome />
+        首頁還在努力XDDD
         <!-- <Apple>
             This is an auto-imported component.
         </Apple> -->
