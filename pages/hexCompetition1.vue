@@ -295,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container" ref="prizeContainer">
                     <div class="prize">
                         <div class="section__title font-weight-bolder" style="margin-bottom: 2rem;">
                             獎項
@@ -1351,26 +1351,6 @@ definePageMeta({
     layout: "no-layout",
 });
 
-// const options: any = {
-//     minimizable: false,
-//     playerSize: "standard",
-//     backgroundColor: '#fff',
-//     backgroundStyle: 'color',
-//     theme: {
-//         controlsView: "standard",
-//         active: "light",
-//         light: {
-//             color: '#3D4852',
-//             backgroundColor: '#fff',
-//             opacity: '0.7',
-//         },
-//         dark: {
-//             color: '#fff',
-//             backgroundColor: '#202020',
-//             opacity: '0.7',
-//         }
-//     }
-// }
 
 const scrollTip = ref<HTMLDivElement | null>(null);
 const wand = ref<HTMLDivElement | null>(null);
@@ -1389,6 +1369,7 @@ const coveringImage3 = ref<HTMLImageElement | null>(null)
 
 const coveringImages: Ref[] = [coveringImage1, coveringImage2, coveringImage3];
 
+const prizeContainer = ref<HTMLImageElement | null>(null)
 const pageSection = ref<HTMLDivElement | null>(null);
 const hacker = ref<HTMLDivElement | null>(null);
 
@@ -1462,9 +1443,20 @@ onMounted(() => {
                                 ease: "power4.in",
                                 scrollTrigger: {
                                     trigger: child,
-                                    start: "top center",
+                                    start: "top center+=200px",
                                 }
                             })
+                        })
+                        const prizeItems = prizeContainer.value.querySelectorAll(".list_item:not(.list_item--no-img)");
+                        $gsap.timeline({
+                            scrollTrigger: {
+                                trigger: prizeContainer.value,
+                                start: "top 200px",
+                            },
+                        }).from(prizeItems, {
+                            opacity: 0,
+                            y: -100,
+                            stagger: 0.5
                         })
                         isPageAnimationFinish.value = true
                     }
@@ -1484,6 +1476,7 @@ onMounted(() => {
             yPercent: "80"
         })
     })
+    //控制banner那三張covering圖片的顯示和隱藏
     watch(isShowCoverContainer, (value) => {
         if (value) {
             $gsap.to(coveringContainer.value, {
