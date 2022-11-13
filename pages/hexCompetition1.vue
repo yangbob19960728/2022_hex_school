@@ -518,7 +518,9 @@ $fontColorWhite: white;
 * {
     font-family: 'Noto Sans TC', sans-serif;
 }
-
+html, body {
+    margin: 0;
+}
 ul {
     list-style-type: none;
     padding-left: 0px;
