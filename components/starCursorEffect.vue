@@ -61,12 +61,8 @@ class Particle implements ParticleItem {
 }
 
 class Vec2 {
-    constructor(x: number = 0, y: number = 0) {
-        this.x = x
-        this.y = y
+    constructor(public x: number = 0, public y: number = 0) {
     }
-    x: number
-    y: number
     set(x: number, y: number) {
         this.x = x
         this.y = y

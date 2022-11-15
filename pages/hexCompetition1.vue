@@ -22,7 +22,7 @@
                 </div>
             </header>
             <div v-show="!isLoadedImage" class="wand">
-                <div class="wand__item" ref="wand"></div>
+                <lottie-component class="wand__item" :options="wandLoadingOptions" />
                 <div class="wand__text">
                     努力加載中...
                 </div>
@@ -427,7 +427,7 @@
                                     <div class="font-weight-bolder ">
                                         請點擊
                                     </div>
-                                    <div class="live__button__wand" ref="wand2"></div>
+                                    <lottie-component class="live__button__wand" :options="wandLoadingOptions" />
                                 </div>
                             </div>
                         </div>
@@ -476,11 +476,9 @@
 
             </section>
         </section>
-        <star-cursor-effect></star-cursor-effect>
-        <div class="scroll-tip-animation" ref="scrollTip" :style="{ 'display': (isPageAnimationFinish) ? 'none' : '' }">
-        </div>
-
-
+        <star-cursor-effect/>
+        <lottie-component class="scroll-tip-animation" :style="{ 'display': (isPageAnimationFinish) ? 'none' : '' }" :options="scrollTipOptions" />
+        
     </div>
 </template>
 
@@ -1332,19 +1330,19 @@ img {
 </style>
 
 <script setup lang="ts">
+/// <reference path="../declare/unity.ts"/>
 import { ref, onMounted, Ref } from 'vue'
+import scrollDownPath from "@/assets/data/scroll_down.json?url";
+import wandLoadingPath from "@/assets/data/wand_loading.json?url";
 
 const { $gsap, $lottie } = useNuxtApp()
-const runtimeConfig = useRuntimeConfig()
 useHead({
+    title: "六角比賽第一周",
     link: [
-        {
-            title: "六角第一周"
-        },
         {
             rel: "preload",
             as: "image",
-            href: runtimeConfig.app.baseURL + "data/wand_loading.json"
+            href: wandLoadingPath
         }
     ]
 })
@@ -1354,9 +1352,6 @@ definePageMeta({
 });
 
 
-const scrollTip = ref<HTMLDivElement | null>(null);
-const wand = ref<HTMLDivElement | null>(null);
-const wand2 = ref<HTMLDivElement | null>(null);
 const gameContainer = ref<HTMLDivElement | null>(null);
 const isPageAnimationFinish = ref<boolean>(false);
 
@@ -1374,31 +1369,19 @@ const coveringImages: Ref[] = [coveringImage1, coveringImage2, coveringImage3];
 const prizeContainer = ref<HTMLImageElement | null>(null)
 const pageSection = ref<HTMLDivElement | null>(null);
 const hacker = ref<HTMLDivElement | null>(null);
-
+const scrollTipOptions = ref<any>({
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: scrollDownPath
+})
+const wandLoadingOptions = ref<any>({
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: wandLoadingPath
+})
 onMounted(() => {
-    $lottie.loadAnimation({
-        container: scrollTip.value,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: runtimeConfig.app.baseURL + "data/scroll_down.json"
-    })
-    $lottie.loadAnimation({
-        container: wand.value,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: runtimeConfig.app.baseURL + "data/wand_loading.json"
-    })
-
-    $lottie.loadAnimation({
-        container: wand2.value,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: runtimeConfig.app.baseURL + "data/wand_loading.json"
-    })
-
     //等待三張banner圖片都已經載入之後，並且等待時間超過0.5s時才會出現，以及要用complete來判斷，因為瀏覽器會有cache，這要就不會有load事件
     Promise.all([...coveringImages.map((item) => {
         return new Promise((resolve, reject) => {
