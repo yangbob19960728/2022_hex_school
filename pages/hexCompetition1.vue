@@ -4,7 +4,7 @@
             <header class="header">
                 <div class="header__content">
                     <div>
-                        <img class="header__logo" src="@/assets/img/hex_logo.png" alt="">
+                        <img class="header__logo" src="@/assets/img/hexCompetition1/hex_logo.png" alt="">
                     </div>
                     <div>
                         <ul class="header__list">
@@ -29,12 +29,12 @@
             </div>
             <section v-show="isLoadedImage">
                 <div class="covering" ref="coveringContainer">
-                    <img class="covering__img covering__img__top" ref="coveringImage1" src="@/assets/img/paper_1.png"
+                    <img class="covering__img covering__img__top" ref="coveringImage1" src="@/assets/img/hexCompetition1/paper_1.png"
                         alt="">
                     <img class="covering__img covering__img__down__left" ref="coveringImage2"
-                        src="@/assets/img/paper_2.png" alt="">
+                        src="@/assets/img/hexCompetition1/paper_2.png" alt="">
                     <img class="covering__img covering__img__down__right" ref="coveringImage3"
-                        src="@/assets/img/paper_3.png" alt="">
+                        src="@/assets/img/hexCompetition1/paper_3.png" alt="">
                 </div>
 
                 <div class="banner">
@@ -72,11 +72,11 @@
                                 </div>
                             </div>
                             <div class="banner__label">
-                                <img src="@/assets/img/label.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/label.png" alt="">
                             </div>
                         </div>
                         <div class="banner__hacker">
-                            <img src="@/assets/img/hacker.png" ref="hacker" alt="">
+                            <img src="@/assets/img/hexCompetition1/hacker.png" ref="hacker" alt="">
                             <div class="banner_prize">
                                 <span>
                                     個人獎
@@ -96,7 +96,7 @@
                         <div class="list__item list__item--introduction" style="margin-top: 4rem">
                             <div class="list__item__content" style="background-image: none;">
                                 <div>
-                                    <img src="@/assets/img/hexSchool.png" alt="">
+                                    <img src="@/assets/img/hexCompetition1/hexSchool.png" alt="">
                                     <div style="margin: 4rem 0px">
                                         年度最強合作，三大關卡來襲
                                     </div>
@@ -113,13 +113,13 @@
                                     視差滾動 Parallax Scrolling
                                 </div>
                                 <div>
-                                    <img src="@/assets/img/block_studio.png" alt="">
+                                    <img src="@/assets/img/hexCompetition1/block_studio.png" alt="">
                                 </div>
                             </div>
                             <div class="list__item__content">
                                 <div class="list__item__detail">
                                     <div class="list__item__img">
-                                        <img src="@/assets/img/parallax_scrolling.png" alt="">
+                                        <img src="@/assets/img/hexCompetition1/parallax_scrolling.png" alt="">
                                     </div>
                                     <div style="flex: 1;">
                                         <div class="list__item_information">
@@ -148,13 +148,13 @@
                                     線上簽署 Canvas
                                 </div>
                                 <div>
-                                    <img src="@/assets/img/kdan_mobile.png" alt="">
+                                    <img src="@/assets/img/hexCompetition1/kdan_mobile.png" alt="">
                                 </div>
                             </div>
                             <div class="list__item__content">
                                 <div class="list__item__detail">
                                     <div class="list__item__img">
-                                        <img src="@/assets/img/pdf.png" alt="">
+                                        <img src="@/assets/img/hexCompetition1/pdf.png" alt="">
                                     </div>
                                     <div style="flex: 1;">
                                         <div class="list__item_information">
@@ -183,13 +183,13 @@
                                     Scrum JS draggable
                                 </div>
                                 <div>
-                                    <img src="@/assets/img/titansoft.png" alt="">
+                                    <img src="@/assets/img/hexCompetition1/titansoft.png" alt="">
                                 </div>
                             </div>
                             <div class="list__item__content">
                                 <div class="list__item__detail">
                                     <div class="list__item__img">
-                                        <img src="@/assets/img/scrum.png" alt="">
+                                        <img src="@/assets/img/hexCompetition1/scrum.png" alt="">
                                     </div>
                                     <div style="flex: 1;">
                                         <div class="list__item_information">
@@ -303,7 +303,7 @@
                         <ul class="list">
                             <li class="list_item">
                                 <div class="list_item__img">
-                                    <img src="@/assets/img/copper.png" alt="">
+                                    <img src="@/assets/img/hexCompetition1/copper.png" alt="">
                                     <div class="list_item__money font-weight-bolder">
                                         $10,000 (3名)
                                     </div>
@@ -315,7 +315,7 @@
                             </li>
                             <li class="list_item">
                                 <div class="list_item__img">
-                                    <img src="@/assets/img/gold.png" alt="">
+                                    <img src="@/assets/img/hexCompetition1/gold.png" alt="">
                                     <div class="list_item__money font-weight-bolder">
                                         $3000 (6名)
                                     </div>
@@ -327,7 +327,7 @@
                             </li>
                             <li class="list_item">
                                 <div class="list_item__img">
-                                    <img src="@/assets/img/silver.png" alt="">
+                                    <img src="@/assets/img/hexCompetition1/silver.png" alt="">
                                     <div class="list_item__money font-weight-bolder">
                                         數位獎狀(60名)
                                     </div>
@@ -352,7 +352,7 @@
                             </div>
                             <div class="list">
                                 <div class="list__item">
-                                    <img src="@/assets/img/李明.gif" alt="">
+                                    <img src="@/assets/img/hexCompetition1/李明.gif" alt="">
                                     <div class="list__item__content">
                                         <div class="list__item__title font-weight-bolder">
                                             網站的動態趨勢
@@ -368,7 +368,7 @@
                                     </div>
                                 </div>
                                 <div class="list__item">
-                                    <img src="@/assets/img/leo.gif" alt="">
+                                    <img src="@/assets/img/hexCompetition1/leo.gif" alt="">
                                     <div class="list__item__content">
                                         <div class="list__item__title font-weight-bolder">
                                             jQuery 也可以做到的互動效果
@@ -384,7 +384,7 @@
                                     </div>
                                 </div>
                                 <div class="list__item">
-                                    <img src="@/assets/img/邱繼緯.gif" alt="">
+                                    <img src="@/assets/img/hexCompetition1/邱繼緯.gif" alt="">
                                     <div class="list__item__content">
                                         <div class="list__item__title font-weight-bolder">
                                             網頁可以拖拖拉拉draggable.js 介紹
@@ -400,7 +400,7 @@
                                     </div>
                                 </div>
                                 <div class="list__item">
-                                    <img src="@/assets/img/吳哲宇.gif" alt="">
+                                    <img src="@/assets/img/hexCompetition1/吳哲宇.gif" alt="">
                                     <div class="list__item__content">
                                         <div class="list__item__title font-weight-bolder">
                                             互動式網頁設計工程師該具備哪些技能？
@@ -437,16 +437,16 @@
                     <div class="container">
                         <div class="logo">
                             <div class="logo__item">
-                                <img src="@/assets/img/jira.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/jira.png" alt="">
                             </div>
                             <div class="logo__item">
-                                <img src="@/assets/img/confluence.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/confluence.png" alt="">
                             </div>
                             <div class="logo__item">
-                                <img src="@/assets/img/miro.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/miro.png" alt="">
                             </div>
                             <div class="logo__item">
-                                <img src="@/assets/img/dotted_sign.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/dotted_sign.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -458,13 +458,13 @@
                         </div>
                         <div class="list">
                             <div class="list__item">
-                                <img src="@/assets/img/block_studio.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/block_studio.png" alt="">
                             </div>
                             <div class="list__item">
-                                <img src="@/assets/img/kdan_mobile.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/kdan_mobile.png" alt="">
                             </div>
                             <div class="list__item">
-                                <img src="@/assets/img/titansoft.png" alt="">
+                                <img src="@/assets/img/hexCompetition1/titansoft.png" alt="">
                             </div>
                         </div>
                         <div class="footer__text font-weight-normal">
@@ -536,13 +536,13 @@ img {
 }
 
 .competition1 {
-    background-image: url('@/assets/img/background_loading.jpg');
+    background-image: url('@/assets/img/hexCompetition1/background_loading.jpg');
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: repeat;
     background-color: #DCC9A9;
     position: relative;
-    cursor: url('@/assets/img/mouse.png') 0 0, pointer;
+    cursor: url('@/assets/img/hexCompetition1/mouse.png') 0 0, pointer;
 
 }
 
@@ -611,7 +611,7 @@ img {
 
 
 .banner {
-    background-image: url("@/assets/img/banner_background.jpg");
+    background-image: url("@/assets/img/hexCompetition1/banner_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vh - $headerHeight);
@@ -633,13 +633,13 @@ img {
     }
 
     .banner__content__background {
-        background-image: url("@/assets/img/background_main.jpg");
+        background-image: url("@/assets/img/hexCompetition1/background_main.jpg");
         padding-bottom: 49.216%;
         background-size: contain;
         background-repeat: no-repeat;
 
         @include breakpoint-md {
-            background-image: url("@/assets/img/background_main_mobile.jpg");
+            background-image: url("@/assets/img/hexCompetition1/background_main_mobile.jpg");
             padding-bottom: 122.554%;
 
         }
@@ -859,7 +859,7 @@ img {
         }
 
         .list__item__content {
-            background-image: url("@/assets/img/item_background.png");
+            background-image: url("@/assets/img/hexCompetition1/item_background.png");
             background-size: 100% 100%;
             min-height: 454px;
             background-repeat: no-repeat;
@@ -1134,7 +1134,7 @@ img {
             width: 171px;
             height: 44px;
             color: $fontColorWhite;
-            background-image: url(@/assets/img/author_background.png);
+            background-image: url(@/assets/img/hexCompetition1/author_background.png);
             background-size: cover;
             font-size: map-get($fontSize, 8);
             display: flex;
@@ -1330,10 +1330,10 @@ img {
 </style>
 
 <script setup lang="ts">
-/// <reference path="../declare/unity.ts"/>
+/// <reference path="../declare/unity.d.ts"/>
 import { ref, onMounted, Ref } from 'vue'
-import scrollDownPath from "@/assets/data/scroll_down.json?url";
-import wandLoadingPath from "@/assets/data/wand_loading.json?url";
+import scrollDownPath from "@/assets/data/hexCompetition1/scroll_down.json?url";
+import wandLoadingPath from "@/assets/data/hexCompetition1/wand_loading.json?url";
 
 const { $gsap, $lottie } = useNuxtApp()
 useHead({
