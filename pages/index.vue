@@ -1,6 +1,7 @@
 <template>
     <div>
         <NuxtLink to="/hexCompetition1">六角第一周比賽頁</NuxtLink>
+        <NuxtLink to="/hexCompetition2">六角第二周比賽頁</NuxtLink>
         <NuxtWelcome />
         首頁還在努力XDDD
         <!-- <Apple>

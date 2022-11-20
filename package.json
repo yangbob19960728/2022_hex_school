@@ -11,6 +11,7 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@types/fabric": "^4.5.12",
     "@types/gsap": "^3.0.0",
     "cross-env": "^7.0.3",
     "nuxt": "3.0.0-rc.12",
@@ -19,8 +20,11 @@
     "vue-tsc": "^1.0.9"
   },
   "dependencies": {
+    "fabric": "^5.2.4",
     "gsap": "^3.11.3",
+    "jspdf": "^2.5.1",
     "lottie-web": "^5.9.6",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "pdfjs-dist": "^3.0.279",
   }
 }
