@@ -1331,7 +1331,7 @@ img {
 
 <script setup lang="ts">
 /// <reference path="../declare/unity.d.ts"/>
-import { ref, onMounted, Ref } from 'vue'
+import { ref, onMounted, Ref  } from 'vue'
 import scrollDownPath from "@/assets/data/hexCompetition1/scroll_down.json?url";
 import wandLoadingPath from "@/assets/data/hexCompetition1/wand_loading.json?url";
 
@@ -1346,7 +1346,9 @@ useHead({
         }
     ]
 })
-
+defineExpose({
+  ssr: false
+})
 definePageMeta({
     layout: "no-layout",
 });

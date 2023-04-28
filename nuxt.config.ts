@@ -1,7 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 const INVALID_CHAR_REGEX = /[\x00-\x1F\x7F<>*#"{}|^[\]`;?:&=+$,]/g;
 const DRIVE_LETTER_REGEX = /^[a-z]:/i;
-const baseURL = process.env.NUXT_APP_DEPLOY_ENV === 'GH_PAGES' ? "/2022_hex_school/" : "/"
+const baseURL = process.env.NUXT_APP_DEPLOY_ENV === 'GH_PAGES' ? "/2022_hex_school/" : "/";
+const buildAssetsDir = "nuxt"
 export default defineNuxtConfig({
     //https://github.com/nuxt/framework/issues/7769#issuecomment-1255599657
     experimental: {
@@ -11,7 +12,13 @@ export default defineNuxtConfig({
         // pageTransition: { name: 'page', mode: 'out-in' },
         // layoutTransition: { name: 'layout', mode: 'out-in' }
         baseURL: baseURL,
-        buildAssetsDir: "nuxt",
+        buildAssetsDir: buildAssetsDir,
+        head: {
+            "title": "六角學院比賽",
+            "link": [
+                { rel: 'icon', href: buildAssetsDir + "/assets/img/favicon.png" }
+            ]
+        }
     },
     typescript: {
         shim: false,
